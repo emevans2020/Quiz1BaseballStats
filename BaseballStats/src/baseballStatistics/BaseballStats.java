@@ -1,23 +1,29 @@
+//query the user to enter player name, H, 2B, 3B, HR, R and BB attributes
 package baseballStatistics;
 
 import java.util.Scanner;
 
 public class BaseballStats {
-
+	
+	//public constructor
 	public BaseballStats() {
 
 	}
 
-	//query the user to enter player name, H, 2B, 3B, HR, R and BB
-	// should be attributes
-	
-	//
+	//will prompt the person for name and save to variable Name
 	public void getName(String name){
 		System.out.println("Enter your name: ");
 		Scanner scan = new Scanner(System.in);
 		String Name = scan.nextLine();
 		System.out.println("Your name is: "+ Name);
 		scan.close();
+	}
+	
+	public void getAtBat (int bats) {
+		
+	}
+	public void getHits (int hits) {
+		
 	}
 	
 	public void getDoubles (int doubles) {
@@ -56,4 +62,11 @@ public class BaseballStats {
 		System.out.println("Enter in the amount of walks: ");
 	}
 
+	public int battingAvg (int Hits, int AtBat) {
+		int BattingAverage= (Hits/AtBat);
+		return BattingAverage;
+	}
+	
+	
+	
 }
